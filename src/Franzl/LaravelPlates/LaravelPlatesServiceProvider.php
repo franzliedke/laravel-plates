@@ -21,6 +21,18 @@ class LaravelPlatesServiceProvider extends ServiceProvider {
 		//
 	}
 
+	public function boot()
+	{
+		$app = $this->app;
+
+		$app['view']->addExtension('plates.php', 'plates', function() use ($app)
+		{
+			$path = $app['config']['view.paths'][0];
+
+			return new Engine($path, 'plates.php');
+		});
+	}
+
 	/**
 	 * Get the services provided by the provider.
 	 *
