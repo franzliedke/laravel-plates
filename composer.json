@@ -1,6 +1,6 @@
 {
     "name": "franzl/laravel-plates",
-    "description": "",
+    "description": "The powerful native PHP templating system Plates for Laravel.",
     "authors": [
         {
             "name": "Franz Liedke",
@@ -9,12 +9,13 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.0.x"
+        "illuminate/support": "4.1.x",
+        "league/plates": "1.0.x"
     },
     "autoload": {
         "psr-0": {
             "Franzl\\LaravelPlates": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
