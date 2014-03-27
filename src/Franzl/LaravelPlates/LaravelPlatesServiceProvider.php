@@ -20,7 +20,7 @@ class LaravelPlatesServiceProvider extends ServiceProvider {
 				$path = $app['config']['view.paths'][0];
 				
 				return new Engine($path, 'plates.php');
-			})
+			});
 		});
 	}
 
